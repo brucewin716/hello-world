@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>apply catelog</title>
+    <link rel="stylesheet" href="css/total.css" />
+    <script src="js/jquery1.9.1.min.js"></script>
+    <script src="js/Validform_v5.3.2_min.js"></script>
+    <script src="js/apply.js"></script>  
+</head>
+<body>
+    <div class="catelog">
+        <div class="container">
+            <div class="apply_maintain">
+                <div class="logo apply_catelog_logo"><img src="img/logo.png" alt="" /></div>
+                <a href="maintain.html">申请维修</a>
+            </div>
+            <div class="apply_title">
+                <a  href="javascript:;"class="apply_title1">申请目录</a>
+                <a  href="javascript:;"class="apply_title2">个人项目</a>
+            </div>
+            <div class="content_box" >
+               <div class="catelog_content clear" >
+                    <ul class="handle_status">
+                        <li>
+                            <img src="img/handling.png" alt="" />
+                            <a href="javascript:;" class="handling">处理中</a></li>
+                        <li>
+                            <img src="img/handled.png" alt="" />
+                            <a href="javascript:;" class="handle">处理完毕</a></li>
+                        </li>
+                    </ul>
+                    <ul class="handle_list">
+                        <li>                 
+                                <p>按页面上提交按钮没有动作，请改正一下</p>
+                                <div class="time">
+                                    <span>接受日期：</span>
+                                    <span>2017-7-21 12:23:14</span>
+                                </div>
+                                <div class="commwent-status">
+                                    状态：<a href="member management.html">已接受</a>
+                                </div>
+                        </li>
+                        <li>
+                                <p>要重新设计会员管理页面</p>
+                                <div class="time">
+                                    <span>接受日期：</span>
+                                    <span>2017-7-20 12:23:14</span>
+                                </div>
+                                <div class="commwent-status">
+                                    状态：<a href="member management.html">维修中</a>
+                                </div>
+                        </li>
+                        <li>
+                                <p>没有搜查按钮</p>
+                                <div class="time">
+                                    <span>接受日期：</span>
+                                    <span>2017-7-19 12:23:14</span>
+                                </div>
+                                <div class="commwent-status">
+                                    状态：<a href="member management.html">测试中</a>
+                                </div>
+                        </li>
+                    </ul>
+                    <a href="maintain.html">
+                        <button class="apply-btn"> 申请维修</button>
+                    </a>
+                </div>
+                <div class="project_content">
+                    <ul class="change_detail">
+                        <li>
+                            <img src="img/user.png" alt="" id="user"/>
+                            <a href="javascript:;"class="change_project">修改个人项目</a>
+                        </li>
+                        <li>
+                            <img src="img/password.png" alt="" id="password" />
+                            <a href="javascript:;"class="change_pwd">修改密码</a>
+                        </li>
+                    </ul>
+                    <div class="form_box">
+                        <form action="" id="project_form" method="post">
+                            <ul class="change_form">
+                                <li>
+                                    <label>用户名 ：</label>
+                                    <input type="text" name="user" class="inputxt" datatype="/^[\u4e00-\u9fa5A-Za-z]{4,8}$/" errormsg="用户名只能是4到8位的中英文" nullmsg="请输入用户名"/>
+                                     <div class="tip Validform_checktip"></div>
+                                </li>
+                                <li>
+                                    <label>邮箱 ：</label>
+                                    <input type="text" name="email" class="inputxt" datatype="/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/" errormsg="您输入的邮箱格式不正确，请重新输入" nullmsg="请输入邮箱"/>
+                                     <div class="tip Validform_checktip"></div>
+                                </li>
+                                <li>
+                                    <label>手机号 ：</label>
+                                    <input type="text" name="phoneNumber" class="inputxt" datatype="/^1[3|4|5|8][0-9]\d{8}$/i" errormsg="您输入的手机号码格式不正确，请重新输入" nullmsg="请输入手机号"/>
+                                     <div class="tip Validform_checktip"></div>
+                                </li>
+                                <li>
+                                   <input type="submit"  class="submit_btn" value="提交"/>
+                                </li>
+                            </ul>                                       
+                        </form>
+                        <form action="" id="pwd_form" method="post">
+                            <ul class="change_form " style="width:570px;">
+                                <li>
+                                    <label>请输入原来的密码 ：</label>
+                                    <input type="password" name="origin_pwd" class="inputxt" datatype="/^[a-zA-Z]\w{5,17}$/" errormsg="以字母开头，6-18位字符、数字和下划线。" nullmsg="请输入原来的密码"/>
+                                     <div class="tip Validform_checktip"></div>
+                                </li>
+                                <li>
+                                    <label>新密码 ：</label>
+                                    <input type="password" name="new_pwd" class="inputxt" datatype="/^[a-zA-Z]\w{5,17}$/" errormsg="以字母开头，6-18位字符、数字和下划线。"nullmsg="请输入新密码"/>
+                                     <div class="tip Validform_checktip"></div>
+                                </li>
+                                <li>
+                                    <label>重新输入密码 ：</label>
+                                    <input type="password" name="same_pwd" class="inputxt" datatype="*" recheck="new_pwd" errormsg="您两次输入的密码不一致" nullmsg="请重新输入密码"/>
+                                     <div class="tip Validform_checktip"></div>
+                                </li>
+                                <li>
+                                   <input type="submit"  class="submit_btn" value="提交"/>
+                                </li>
+                            </ul>                                       
+                        </form>
+                    </div>                  
+                </div>    
+            </div>
+                     
+        </div>
+    </div> 
+    <script>
+        $(function(){
+            //$(".registerform").Validform();  //就这一行代码！;
+            /*======修改个人项目表单的验证=====*/ 
+            $("#project_form").Validform({
+                tiptype:function(msg,o,cssctl){
+                    //msg：提示信息;
+                    //o:{obj:*,type:*,curform:*}, obj指向的是当前验证的表单元素（或表单对象），type指示提示的状态，值为1、2、3、4， 1：正在检测/提交数据，2：通过验证，3：验证失败，4：提示ignore状态, curform为当前form对象;
+                    //cssctl:内置的提示信息样式控制函数，该函数需传入两个参数：显示提示信息的对象 和 当前提示的状态（既形参o中的type）;
+                    if(!o.obj.is("form")){//验证表单元素时o.obj为该表单元素，全部验证通过提交表单时o.obj为该表单对象;
+                        var objtip=o.obj.siblings(".Validform_checktip");
+                        cssctl(objtip,o.type);
+                        objtip.text(msg);
+                    }else{
+                        var objtip=o.obj.find("#msgdemo");
+                        cssctl(objtip,o.type);
+                        objtip.text(msg);
+                    }
+                },
+                ajaxPost:true,
+                callback:function(data){
+                    if(data.status=="y"){
+                        window.location.href="www.baidu.com";
+                    }
+                }
+            });
+            /*=====修改个人项目表单的验证=======*/ 
+            $("#pwd_form").Validform({
+                tiptype:function(msg,o,cssctl){
+                    //msg：提示信息;
+                    //o:{obj:*,type:*,curform:*}, obj指向的是当前验证的表单元素（或表单对象），type指示提示的状态，值为1、2、3、4， 1：正在检测/提交数据，2：通过验证，3：验证失败，4：提示ignore状态, curform为当前form对象;
+                    //cssctl:内置的提示信息样式控制函数，该函数需传入两个参数：显示提示信息的对象 和 当前提示的状态（既形参o中的type）;
+                    if(!o.obj.is("form")){//验证表单元素时o.obj为该表单元素，全部验证通过提交表单时o.obj为该表单对象;
+                        var objtip=o.obj.siblings(".Validform_checktip");
+                        cssctl(objtip,o.type);
+                        objtip.text(msg);
+                    }else{
+                        var objtip=o.obj.find("#msgdemo");
+                        cssctl(objtip,o.type);
+                        objtip.text(msg);
+                    }
+                },
+                ajaxPost:true,
+                callback:function(data){
+                    if(data.status=="y"){
+                        window.location.href="www.baidu.com";
+                    }
+                }
+            });
+        })
+     </script>
+</body>
+</html>
